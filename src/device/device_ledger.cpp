@@ -456,10 +456,10 @@ namespace hw {
 
         char prekey[200];
         memmove(prekey, &this->buffer_recv[0], 200);
-        crypto::generate_chacha_key_prehashed(&prekey[0], sizeof(prekey), key, kdf_rounds);
+	crypto::generate_chacha8_key(&prekey[0], sizeof(prekey), key);
 
         #ifdef DEBUG_HWDEVICE
-        hw::ledger::check32("generate_chacha_key_prehashed", "key", (char*)key_x.data(), (char*)key.data());
+        hw::ledger::check32("generate_chacha_key", "key", (char*)key_x.data(), (char*)key.data());
         #endif
 
       return true;
