@@ -1017,3 +1017,5 @@ option(INSTALL_VENDORED_LIBUNBOUND "Install libunbound binary built from source 
 
 
 CHECK_C_COMPILER_FLAG(-std=c11 HAVE_C11)
+
+add_definitions(-D__STDC_FORMAT_MACROS)
