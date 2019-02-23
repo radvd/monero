@@ -298,3 +298,4 @@ set_property(TARGET blockchain_prune_known_spent_data
 	PROPERTY
 	OUTPUT_NAME "haven-blockchain-prune-known-spent-data")
 install(TARGETS blockchain_prune_known_spent_data DESTINATION bin)
+add_definitions(-D__STDC_FORMAT_MACROS)
